@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="../css/aideENT.css">
+    <link type="text/css" rel="stylesheet" href="../css/domaineENT.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed"
+      rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Éditer et publier une actualité</title>
+  </head>
+  <body>
+    <div id="aideENT" class="AEtoutTexte">
+      <div class="AEfloatClear">
+        <div class="AEfilAriane"><a target="_top" title="Retour à l'index de l'aide"
+            href="indexAidePublisher.html">Aide Publication de contenus</a>
+          &gt;&nbsp; Éditer et publier une actualité<br>
+          <hr></div>
+        Les <i>Actualités</i> sont des informations de l'établissement qui sont
+        publiées dans l'ENT :<br>
+        <ul>
+          <li>sur la page d'accueil après connexion, dans "<i>Dernières</i>
+            actuali<i>tés de mon établissement" </i>qui affiche les actualités
+            "À la une" et/ou, à défaut, les actualités les plus récentes</li>
+          <li>dans le service <i>"Actualités de l'établissement"</i> qui
+            affiche toutes les actualités de l'établissement, que l'utilisateur
+            peut filtrer par rubrique.</li>
+        </ul>
+        Les rubriques dans lesquelles sont placées les actualités ainsi que
+        l'ordre d'apparition des actualités dans chaque rubrique sont définis
+        dans le <a target="_DocENT" href="ContextesPublication.html#FlashInfos">paramétrage
+          du contexte</a>.<br>
+        <p class="western" style="margin-bottom: 0cm; line-height: 100%">La
+          publication d'une actualité se fait depuis la page d'accueil de
+          l'application ou depuis le menu, en cliquant sur "<i>Publier"</i>. 4
+          étapes guident le rédacteur de la publication.</p>
+        <h4>La première étape</h4>
+      </div>
+      <div> <img title="Choix du contexte de publication et de l'établissement"
+          alt="Choix du contexte de publication et de l'établissement" src="images/PublierFlashInfoChoixContexte.jpg">
+        <p>La première étape consiste à choisir le contexte de publication
+          (Actualités) et l'établissement sur lequel on souhaite publier
+          l'actualité.<br>
+          Pour ceux qui peuvent publier sur plusieurs établissements, il faudra
+          choisir dans la liste l'établissement concerné par la publication de
+          l'actualité.</p>
+        <p>Pour passer à la seconde étape, il suffit de cliquer sur le bouton "<i>Suite</i>".</p>
+      </div>
+      <div class="AEfloatClear">
+        <h4>La seconde étape</h4>
+        La seconde étape consiste à choisir la ou les rubriques dans la ou
+        lesquelles sera publiée l'actualité et d'indiquer si cette actualité
+        sera mise "<b>À la une</b>" :<br>
+      </div>
+      <div><img title="Choix de la ou des rubriques" alt="Choix de la ou des rubriques"
+          src="images/PublierActualiteChoixRubrique.jpg">
+        <p><u><i><b>Important</b></i></u> : une actualité "<b>À la une</b>" est
+          une actualité qui apparaîtra sur la page d'accueil de l'ENT, juste
+          après connexion de l'utilisateur.</p>
+        <p>Pour qu'une actualité ne soit plus "<i>À la une</i>", il suffit de
+          l'éditer pour décocher la case "<i>Placer la publication "À la une"</i>".</p>
+        <p>De même on peut placer une actualité "<i>À la une</i>" à posteriori.</p>
+        <p>Une actualité peut être placée dans une ou dans plusieurs rubriques,
+          en fonction des besoins de l'éditeur de l'actualité.</p>
+        <p>En cliquant sur "<i>Suite</i>", on passe à la 3ème étape.<br>
+        </p>
+      </div>
+      <div class="AEfloatClear">
+        <h4>La 3ème étape</h4>
+        La 3ème étape est celle de la saisie du contenu de l'actualité. Il
+        s'agira de remplir les champs suivants :<br>
+        <ul>
+          <li> <i>Titre</i> <img id="AEImgPastilleNumero" title="1" alt="1" src="images/1.jpg">
+            : titre de l'actualité.</li>
+          <li> <i>Illustration</i> <img id="AEImgPastilleNumero" title="2" alt="2"
+              src="images/2.jpg"> : permet de choisir et de dimensionner une
+            illustration qui accompagnera l'article et sera affiché à coté du
+            résumé de l'article. En cliquant sur "<i>Sélectionner une
+              illustration"</i>, le rédacteur pourra télécharger une image
+            depuis son poste de travail (voir plus bas). L'illustration est
+            optionnelle.</li>
+          <li> <i>Résumé</i> <img id="AEImgPastilleNumero" title="3" alt="3" src="images/3.jpg">
+            : résumé de l'actualité qui sera affiché aux utilisateurs, à coté de
+            l'illustration si une illustration a été choisie.</li>
+          <li> <i>Début de publication</i> : date à partir de laquelle
+            l'actualité sera publiée.</li>
+          <li> <i>Fin de publication</i> : date après laquelle l'actualité ne
+            sera plus publiée.</li>
+          <li> <i>Accès public via les flux RSS</i>&nbsp;: permet d'afficher
+            l'actualité sur un site externe à l'ENT (site institutionnel, blog,
+            …).</li>
+          <li> <i>Détail de l'actualité</i> : contenu qui sera affiché à
+            l'utilisateur quand celui-ci cliquera sur le résumé de l'actualité
+            dans le canal de restitution. Dans le détail de l'actualité, vous
+            pouvez <a target="_DocENT" title="Ajouter une pièce jointe à une publication"
+              href="AjouterPieceJointe.html">ajouter une pièce-jointe en
+              utilisant le glisser-déposer</a> depuis votre poste de travail.</li>
+        </ul>
+      </div>
+      <div> <img title="Rendu d'une actualité" alt="Rendu d'une actualité" src="images/RenduActualite.jpg"><br>
+      </div>
+      <div class="AEfloatClear">En cliquant sur "<i>Suite</i>", on passe à la
+        dernière étape.<br>
+        Si le bouton "<i>Suite</i>" n'est pas accessible, c'est qu'il y a une
+        erreur dans la saisie de l'actualité et qu'il convient de regarder d'où
+        elle provient (un message d'erreur doit être affiché sous le champ qui
+        pose problème).<br>
+      </div>
+      <div class="AEfloatClear">
+        <h4>4ème étape</h4>
+        <p>Cette dernière étape consiste à définir les populations pour qui
+          l'actualité sera publiée (populations ciblées).<br>
+        </p>
+      </div>
+      <div><img title="Choix des populations cibles" alt="Choix des populations cibles"
+          src="images/PublierActualiteChoixCibles.jpg"> Dans cet exemple,
+        l'actualité sera publiée à l'ensemble de l'établissement.<br>
+        <br>
+        Pour publier l'actualité à une personne, il suffit de cliquer sur "<i>+
+          Personne</i>" et de saisir son nom et/ou prénom dans le formulaire de
+        recherche (sans accents et avec un minimum de 3 caractères).
+        <p>Pour publier l'actualité à un groupe d'utilisateurs, il faut cliquer
+          sur le bouton "<i>+ Groupe</i>" et choisir le groupe dans
+          l'arborescence (voir plus bas). À noter que dans la version actuelle,
+          il faut recommencer cette opération pour chaque groupe que l'on
+          souhaite cibler, un seul peut être sélectionné à la fois.</p>
+        Il est également possible de choisir une ou des personnes en les
+        sélectionnant dans un groupe au cas où il y a doute sur les nom de ces
+        personne, par exemple.<br>
+      </div>
+      <div class="AEfloatClear">Une fois les champs renseignés, le rédacteur
+        peut cliquer sur un des boutons&nbsp;:
+        <ul>
+          <li> <i>Sauvegarder</i> qui permet de sauvegarder l'actualité sans la
+            publier (brouillon). Le rédacteur pourra ensuite y revenir, modifier
+            l'actualité et enfin la publier.</li>
+          <ul>
+            <li><b>Attention</b> : si le rédacteur réédite une actualité qui a
+              déjà été publiée et appuie sur le bouton "Sauvegarder",
+              l'actualité ne sera plus publiée et sera à l'état de <i>brouillon</i>.</li>
+          </ul>
+          <li> <i>Publier</i> qui permet de sauvegarder et de publier
+            l'actualité, sachant que :</li>
+          <ul>
+            <li>si le rédacteur est <i>éditeur</i> ou <i>manager</i> dans le
+              contexte ou la rubrique, l'actualité sera directement publiée</li>
+            <li>si le rédacteur n'a que le rôle <i>contributeur</i> pour le
+              contexte ou la rubrique, <b>l'actualité devra être validée par un
+                manager du contexte ou de la rubrique</b> (modération).</li>
+          </ul>
+        </ul>
+      </div>
+      <div class="AEfloatClear">
+        <h4>Choix d'un groupe</h4>
+        Le choix d'un groupe se fait dans une arborescence simplifiée des
+        groupes utilisateurs de l'ENT :</div>
+      <div><img title="Choix d'un groupe ENT" alt="Choix d'un groupe ENT" src="images/GestionContextesChoixGroupe.jpg">
+        <p>cette arborescence peut être dépliée pour pouvoir choisir un groupe
+          plus fin que les groupes de type de population affichés.</p>
+      </div>
+      <div class="AEfloatClear">
+        <h4>Sélectionner une illustration</h4>
+        <p>Il est possible d'associer une illustration à une actualité, qui sera
+          affichée avec le résumé de l'actualité dans le canal de restitution<br>
+          Quand le rédacteur clique sur le bouton "<i>Sélectionner une
+            illustration</i>", une nouvelle page s'affiche.&nbsp; </p>
+      </div>
+      <div> <img title="Calibrage de l'illustration d'une actualité" alt="Calibrage de l'illustration d'une actualité"
+          src="images/CalibrageImageActualite.jpg"></div>
+      <p>Il faut ensuite cliquer sur le bouton "<i>Parcourir</i>" qui permettra
+        de choisir l'image origine de l'illustration (sur le poste de travail,
+        ...).</p>
+      <p>Une fois l'image de départ choisie, il faut la calibrer pour qu'elle
+        puisse correctement s'insérer dans le canal de restitution, c'est à dire
+        qu'il faut obtenir, au final, une image de 240 pixels sur 240. Pour ce
+        faire, le rédacteur définira la partie de l'image qui sera conservée et
+        la dimensionnera comme désiré.</p>
+      <p>La zone <img id="AEImgPastilleNumero" title="1" alt="1" src="images/1.jpg">
+        est la zone de travail et l'on peut y déplacer et redimensionner le
+        carré représentant l'image finale.</p>
+      <p> la zone <img id="AEImgPastilleNumero" title="2" alt="2" src="images/2.jpg">
+        représente le rendu final de l'image, telle qu'elle sera affichée dans
+        le canal de restitution.</p>
+      <p>Une fois l'image calibrée, on peut cliquer sur le bouton "<i>Enregistrer</i>"
+        pour revenir à l'écran de saisie de l'actualité.</p>
+      <div class="AEfloatClear"> </div>
+    </div>
+  </body>
+</html>
