@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/aide/css/aideENT.css">
+    <link type="text/css" rel="stylesheet" href="/aide/css/domaineENT.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed"
+      rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      type="text/css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Raccordement de CPro STI/Cerise Pro à l'ENT</title>
+  </head>
+  <body>
+    <div id="aideENT" class="AEtoutTexte">
+      <div class="AEfloatClear">
+        <h1>Raccordement de CPro STI/Cerise Pro à l'ENT</h1>
+        <div class="AEfloatClear AEmenuInterne">
+          <a title="Schéma de principe" href="#schemaPrincipe">Schéma de principe du rapprochement des comptes ENT dans Cerise Pro</a><br>
+          <a title="Extraction des comptes ENT" href="#exportCptENT">Extraction des comptes ENT</a><br>
+          <a title="Rapprochement des comptes dans CPro" href="#rapprochementComptes">Rapprochement des comptes dans Cerise Pro et/ou Cerise Pro STI</a><br>
+          <a title="Mise à disposition de l'application" href="#peuplementGroupes">Mise à disposition de l'application</a><br>
+        </div>
+        <hr>
+        <p>Le raccordement de CPro STI/Cerise Pro consiste en la mise en place d’un connecteur permettant d’établir une correspondance entre un utilisateur de
+           l’ENT et un utilisateur de l’application. Cette correspondance va se faire en stockant dans la base de données de l’application
+           l'identifiant ENT de l'utilisateur.<br>
+           Conformément au SDET, l’ENT ne fournira aucune information personnelle dans le ticket CAS,
+           ce qui implique que pour effectuer le rapprochement de tous les comptes (ENT ↔ Application), il est nécessaire
+           de passer par l’importation d’un fichier CSV en plus des traditionnels fichiers XML issus de STS_EMP et de SIECLE.<br>
+           Ce fichier CSV est mis à disposition des établissements par l’ENT et sera importé via la même interface d’import que les
+           fichiers XML (les fichiers XML, puis les fichiers CSV).</p>
+           <hr>
+        <h3><a id="Schéma de principe" name="choixProfil"></a>Schéma de principe du rapprochement des comptes ENT dans Cerise Pro</h3>
+        <div class="AEfloatClear">
+          <img style="border:solid 1px;border-color:#000000;max-width:100%;" title="Schéma de principe" alt="Schéma de principe"
+            src="images/SchemaDePrincipe.png"> </div>
+        <div class="AEfloatClear">
+          <p><span style="font-style: italic;">Étape 1 : une personne autorisée à réaliser des exports dans la Gestion des Comptes ENT extrait un fichier formaté pour CPro.<br>
+             Étape 2 : l'outil de Gestion des Comptes ENT constitue la liste des utilisateurs demandés.<br>
+             Étape 3 : la personne qui a demandé la liste reçoit le fichier au format CSV.<br>
+             Étape 4 : l'administrateur CPro importe dans CPro le fichier CSV pour réaliser le rapprochement des comptes.<br></span></p>
+             Cette suite d'opérations est à réaliser pour les enseignants et pour les élèves à tour de rôle, le format de fichier étant différent.
+          <hr>
+          <h3><a id="exportCptENT" name="exportCptENT"></a>Extraction des comptes ENT</h3>
+          <p>L'administrateur demande l'extraction des informations concernant les élèves d'une part et les enseignants d'autre part :</p>
+          <img style="border:solid 1px;border-color:#000000;max-width:100%;" title="Export des comptes ENT" alt="Export des comptes ENT" src="images/extractionComptes.png"> </div>
+        <div class="AEfloatClear">
+          <p>Pour réaliser ces extractions, l'administrateur choisit le type de population désiré, clique sur le bouton "<span style="font-style: italic;">Préparer</span>"
+             puis sur le bouton "<span style="font-style: italic;">Exporter</span>" pour récupérer le fichier.</p>
+          <hr>
+          <h3><a id="rapprochementComptes" name="rapprochementComptes"></a>Rapprochement des comptes dans Cerise Pro ou Cerise Pro STI (CPRO) </h3>
+          <p>La correspondance entre un compte Cpro et un comptes ENT ne peut se faire que si celle-ci est unique. En cas de doublon, il sera nécessaire d'intervenir manuellement.<br>
+             Pour les établissements qui souhaitent mettre en place le connecteur, voici les actions à réaliser :<br>
+             <ol>
+               <li>L’administrateur de CPro dans l’établissement et/ou l’administrateur ENT envoie un courriel à l’assistance (assistance-cpro@reseau-canope.fr) pour demander la mise en place du connecteur en précisant son RNE et la date à laquelle il souhaite la mise en œuvre ;</li>
+               <li>L’assistance active les fonctions d’import des fichiers CSV issus de l’ENT et répond à l’établissement ;</li>
+               <li>L’administrateur de l’application importe les fichiers CSV issus de l’ENT dans le module ""<span style="font-style: italic;">Importer les fichiers</span>" ;</li>
+               <li>À la date convenue :</li>
+               <ul>
+                <li>a. l’administrateur de l’ENT crée la ressource permettant aux utilisateurs d’accéder à l’application Cerise pro/Cpro STI</li>
+                <li>b. l’assistance active le connecteur.</li>
+                <li>c. un échange téléphonique entre l’assistance et l’administrateur de l’application est souhaitable pour tester un compte enseignant ou élève en direct ;</li>
+               </ul>
+               <li>Dès que le connecteur est mis en place, la page de l’application n’est plus accessible, une redirection vers l’ENT est mise en place. En revanche, l’administrateur de l’application doit s’authentifier à partir de l’URL suivante en utilisant ses identifiants habituels :</li>
+               <ul>
+                 <li><a href="https://www.cerise-pro.fr/admincerisepro" title="Administration Cerise PRO" alt="Administration Cerise PRO" target="_blank">https://www.cerise-pro.fr/admincerisepro</a> pour l’application Cerise pro.</li>
+                 <li><a href="https://www.cpro-sti.fr/admincpro" title="Administration Cerise PRO STI" alt="Administration Cerise PRO STI" target="_blank">https://www.cpro-sti.fr/admincpro</a> pour l’application Cpro STI.</li>
+               </ul>
+               <li>L’administrateur de l’application doit continuer à importer les fichiers SIECLE/STS_EMP dans le module Importer les fichiers pour mettre à jour les bases utilisateurs de l’application. Pour que les nouveaux utilisateurs puissent accéder à l’application, il est nécessaire que l’administrateur de l’ENT exporte des fichiers CSV de l’ENT pour les importer dans le module Importer les fichiers de l’application afin que celle-ci et l’ENT disposent d’informations communes pour le connecteur.</li>
+             </ol>
+             Contact assistance : <a href="mailto:assistance-cpro@reseau-canope.fr" title="Support Cerise PRO" alt="Support Cerise PRO">assistance-cpro@reseau-canope.fr</a>
+          <hr>
+          <h3><a id="peuplementGroupes" name="peuplementGroupes"></a>Mise à disposition de l'application aux publics concernés dans l'ENT</h3>
+          <p>Une fois le connecteur mis en place, l'administrateur ENT peuple le groupe
+             Cerise Pro (<span style="font-style: italic;">Applications:Cerise Pro:Établissement</span>)
+             et/ou le groupe Cerise Pro STI (<span style="font-style: italic;">Applications:Cerise Pro STI:Établissement</span>) avec les populations concernées.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
