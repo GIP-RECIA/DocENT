@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/aide/css/aideENT.css">
+    <link type="text/css" rel="stylesheet" href="/aide/css/domaineENT.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed"
+      rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      type="text/css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Pré-requis pour l'intégration de pronote dans l'ENT des collèges de Touraine</title>
+  </head>
+  <body>
+    <div id="aideENT" class="AEtoutTexte">
+      <div class="AEfloatClear">
+        <div class="AEfilAriane"><a target="_DocENT" title="Retour à l'index de l'aide"
+            href="/documentations/pronote/commun/index.html">Pronote et l'ENT</a>
+             &gt; Pré-requis pour l'intégration de pronote dans l'ENT des collèges de Touraine<br>
+          <hr>
+        </div>
+        <div class="AEfloatClear AEmenu">
+          <a title="Prévenir le support" href="#prevenirSupport">
+            Prévenir le support de la DSI du rectorat (support at ac-orleans-tours.fr) lors d'un changement de contexte ou pour une première intégration de pronote dans l'ENT</a><br>
+          <a title="Installation normalisée" href="#installNormalisee">
+            Hormis en mode hébergé chez Index Éducation, les différentes applications Pronotes doivent être installées de façon normalisée et sécurisée</a><br>
+          <a title="Création de la base Pronote" href="#creationBasePronote">
+            La base pronote doit être alimentée à partir de sts-web et siecle... </a>
+          <a title="Accessibilité de Pronote" href="#accessibilitePronote">
+            Hormis en mode hébergé chez Index Éducation, le serveur pronote et le pronote.net doivent être correctement configurés et accessible en permanence via le web</a>
+        </div>
+        <hr>
+        <div class="AEfloatClear">
+          <h3><a id="prevenirSupport" name="prevenirSupport"></a>Informer le support</h3>
+          <p>Lors d'une première intégration de pronote dans l'ENT, il est nécessaire que le support en soit averti, surtout dans le cas d'un Pronote installé dans l'établissement
+            pour lequel la DSI du rectorat doit déployer des services afin de le rendre disponible dans l'ENT. Cela est aussi nécessaire afin de fournir des accès sécurisés aux
+            services Pronote.<br>
+            Lors du passage de Pronote en mode hébergé chez Index Éducation, ou inversement un retour à l'installation dans l'établissement, il est également
+            nécessaire d'informer le support afin de changer le lien d'accès à Pronote configuré dans l'ENT.<br>
+          <hr>
+          <h3><a id="installNormalisee" name="installNormalisee"></a>Normalisation des installations</h3>
+          <p>Il est fortement recommandé de faire héberger son serveur Pronote chez Index Éducation car cela facilite l'administration.<br>
+            Mais s'il est choisi d'héberger Pronote en établissement, afin de savoir si l'installation respecte les normes il est important de contacter le support
+            de la DSI du rectorat.<br>
+            Pour des raisons évidentes de sécurité, le système d'exploitation de type Windows où les services Pronotes sont installés doit être un système de type serveur,
+            mis à jour régulièrement (màj automatiques) et dont le support Microsoft est encore valable (windows XP à bannir, par exemple).
+            Suite à cette installation les services Pronote seront exposés sur internet.<br>
+          <hr>
+          <h3><a id="creationBasePronote" name="creationBasePronote"></a>Création de la base pronote</h3>
+          <p>Avant de configurer Pronote pour son intégration dans l'ENT, il faut que celui-ci ait une base initialisée correctement à partir des informations de STS-web
+            et de Siècle. Mais aussi, ces applications doivent (facultatif mais vivement recommandé) au préalable avoir été complétées par les informations EDT.
+            <span style="font-weight: bold;">Les saisies manuelles de compte pour initialiser la base pronote sont à banir</span>,
+            les procédures automatiques évitent ces saisies et facilitent le rapprochement des comptes ENT/pronote par la suite.<br>
+            Ces opérations sont recommandées dans le but de faciliter la gestion du rapprochement des comptes ENT avec les comptes Pronote dans la base pronote par les établissements.
+          </p>
+          <hr>
+          <h3><a id="accessibilitePronote" name="accessibilitePronote"></a>Accessibilité</h3>
+          <p>Une fois intégrés dans l'ENT les services Pronote doivent être fonctionnel en permanence, cela signifie que :
+            <ul>
+              <li>La base pronote est publiée</li>
+              <li>Les espaces des utilisateurs autorisés sont publiés</li>
+              <li>Les applications sont configurées comme des services Windows afin qu'elles soient automatiquement démarrés au redémarrage de la machine et/ou du système.</li>
+            </ul>
+            En résumé sans un accès pronote.net fonctionnel l'accès à pronote dans l'ENT ne sera pas possible, car tout dépend du fonctionnement du service pronote.net .
+            </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/aide/css/aideENT.css">
+    <link type="text/css" rel="stylesheet" href="/aide/css/domaineENT.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed"
+      rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      type="text/css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Configuration de Pronote pour intégration dans l'ENT</title>
+  </head>
+  <body>
+    <div id="aideENT" class="AEtoutTexte">
+      <div class="AEfloatClear">
+        <div class="AEfilAriane"><a target="_DocENT" title="Retour à l'index de l'aide"
+            href="/documentations/pronote/commun/index.html">Pronote et l'ENT</a>
+             &gt; Configuration de Pronote pour intégration dans l'ENT<br>
+          <hr>
+        </div>
+        <div class="AEfloatClear AEmenu">
+          <a title="Configuration Pronote hébergé chez Index Éducation" href="#pronoteIndex">
+            Configuration d'un Pronote.net hébergé chez Index Éducation</a><br>
+          <a title="Configuration Pronote installé en établissement" href="#pronoteEtablissement">
+            Configuration d'un Pronote.net installé en établissement</a>
+        </div>
+        <hr>
+        <div class="AEfloatClear">
+          <h3><a id="pronoteIndex" name="pronoteIndex"></a>Configuration d'un Pronote.net hébergé chez Index Éducation</h3>
+          <p>pour ce type d'installation, il y 2 possibilités :
+            <ul>
+              <li>pratiquer une double authentification</li>
+              <li>effectuer un rapprochement des comptes PRONOTE et ENT. </li>
+            </ul>
+            <ol>
+              <li>Dans le premier cas après s'être authentifié à l'ENT l'utilisateur devra saisir ses identifiants Pronote lors de son premier accès à Pronote au travers de l'ENT.
+            Par la suite, l'identification Pronote ne sera plus, car Pronote aura conservé l'identifiant ENT de la personne.
+            Par contre si un nouveau compte ENT pour la personne est généré, il faudra supprimer l'ancien identifiant ENT (nommé identifiant CAS dans pronote)
+            associé au compte Pronote de la base Pronote.<br>
+            Cette configuration est très satisfaisante pour respecter le consentement des utilisateurs au rapprochement de leur compte ENT avec leur compte Pronote,
+            mais elle ajoute une complexité importante à l'administration du dispositif (compte ENT + compte Pronote, incompréhensions sur les mots de passe oubliés, ...).</li>
+            <li>Dans le second cas le <a title="Rapprochement des comptes ENT avec les comptes Pronote" href="/documentations/pronote/commun/associationComptes.html">
+              rapprochement des comptes ENT et Pronote</a> est effectué par l'administrateur Pronote via des imports complémentaires dans la base Pronote.
+              pour effectuer la configuration, il faut se rendre sur la console d'hébergement, normalement accessible ici :
+              <a title="Console d'hébergement Index Éducation" target="_blank" href="https://hebergement.index-education.net/">https://hebergement.index-education.net/.</a><br>
+              Si vous avez enregistré votre certificat vous devriez pouvoir accéder à la configuration du Pronote.net.
+              Si ce n'est pas le cas, Index Éducation fournit les documentations et l'assistance (via son support SAV) nécessaires.<br>
+              Voici une copie d'écran (basée sur Pronote 2014, mais le principe est le même sur les versions suivantes)
+              de la configuration à réaliser afin de rendre accessible Pronote en mode hébergé dans l'ENT :</p>
+              </li>
+            </ol>
+              <p><img style="max-width: 100%;" title="Configuration Pronote hébergé chez Index Éducation" alt="Configuration Pronote hébergé chez Index Éducation"
+                src="images/consolePronoteHeberge.png"/></p>
+        </div>
+        <div class="AEfloatClear">
+          Sur cet écran, il faut effectuer les opérations suivantes :
+          <ul>
+            <li>Cocher la case "<span style="font-style: italic;">Activer l'authentification avec CAS</span>"</li>
+            <li>Choisir, pour "<span style="font-style: italic;">Mon ENT</span>" :
+              "<span style="font-style: italic;">Touraine-eschool (Département d'Indre et Loire : Mode avec alimentation)</span>"</li>
+            <li>Si en parallèle à la connexion ENT, l'établissement souhaite donner accès à Pronote en connexion directe, c'est à dire avec les identifiants Pronote,
+            il faut cocher la case correspondante.</li>
+          </ul>
+          <hr>
+          <h3><a id="pronoteEtablissement" name="pronoteEtablissement"></a>Configuration d'un Pronote.net installé en établissement</h3>
+          <p>Quand Pronote est hébergé en établissement, la DSI du rectorat est en charge de la configuration de la DMZ sur le AMON,
+            et de la mise en place d'un accés sécurisé permettant d'accèder au Pronote via l'ENT. <br>
+            Ce lien est de ce type : https://pronote.clg-{NOM_ETAB-VILLE}.ac-orleans-tours.fr<br>
+            Selon les cas cette adresse peut être revue pour limiter la longeur de la chaine de caractères.
+            Dans tous les cas, elle doit être connue de l'établissement afin de pouvoir l'utiliser lors des installations de Pronote.<br>
+            La configuration se fait dans 2 écrans Pronote (les copies concernent Pronte 2014, mais le principe est inchangé dans les versions supérieures).
+            Le premier concerne les paramètres de publication :</p>
+            <p><img style="max-width: 100%;" title="Paramètres de publication d'un Pronote établissement" alt="Paramètres de publication d'un Pronote établissement"
+                src="images/consolePronoteEtabParam.png"/></p>
+          </div>
+          <div class="AEfloatClear">
+            <p>Il faut renseigner les paramètres suivants :
+              <ul>
+                <li>Choix du protocole : <span style="font-weight: bold;">http</span></li>
+                <li>Port d'écoute : <span style="font-weight: bold;">80</span></li>
+                <li>Cliquer sur le bouton <span style="font-weight: bold;">Réserver le préfixe d'URL</span></li>
+                <li>URL publique de "Pronote.net" : <span style="font-weight: bold;">https://pronote.clg-{NOM_ETAB-VILLE}.ac-orleans-tours.fr</span></li>
+              </ul></p>
+            <p><img style="max-width: 100%;" title="Intégration dans un ENT" alt="Intégration dans un ENT"
+                src="images/consolePronoteEtabIntegration.png"/></p>
+          </div>
+          <div class="AEfloatClear">
+            <p>Il faut renseigner les paramètres suivants :
+              <ul>
+                <li>Cocher "<span style="font-weight: bold;">Activer l'interconnexion avec un ENT</span>"</li>
+                <li>Choisir, pour "<span style="font-style: italic;">Mon ENT</span>" :
+                  <span style="font-style: italic;">Touraine-eschool (Département d'Indre et Loire : Mode avec alimentation)</span>"</li>
+              </ul>
+          </p>
+          <p>Pour terminer l'installation, il reste à réaliser une procédure un peu contraignante mais nécessaire,
+          l'import de fichiers complémentaires à partir d'exports de l'ENT pour permettre le
+          <a title="Rapprochement des comptes ENT et Pronote" href="/documentations/pronote/commun/associationComptes.html">rapprochement des comptes</a> ENT avec les comptes Pronote dans la base Pronote.
+          C'est cette procédure qui permet de réaliser une authentification transparente sur l'application pronote.<br>
+          NOTE : il est possible de ne pas réaliser un rapprochement des comptes en choisissant la configuration
+          "<span style="font-style: italic;">Touraine e-school/NetO'Centre (...: Mode sans alimentation)</span>", mais cela n'est pas conseillé car source d'erreurs
+          non détectables avant que l'utilisateur n'accède à l'application Pronote dans l'ENT. Le message d'erreur affiché par Pronote est en général
+          assez peu explicite, et peut faire perdre du temps pour l'établissement ou le support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
