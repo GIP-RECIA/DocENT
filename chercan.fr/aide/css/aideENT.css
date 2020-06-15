@@ -1,0 +1,105 @@
+#aideENT .AEbandeau {
+  padding-bottom: 0;
+  margin: 0;
+}
+#aideENT.AEtoutTexte {
+  font-family: "Roboto-Condensed", Helvetica,Arial,sans-serif;
+  color: #333;
+  font-size: 14px;
+  margin: 5px;
+}
+
+#aideENT.AEtoutTexte a {
+  color: #333;
+  text-decoration: none;
+} 
+
+#aideENT.AEtoutTexte h2 {
+  font-size: 125%;
+}
+
+#aideENT.AEtoutTexte h3 {
+  font-size: 110%;
+}
+      
+#aideENT.AEtoutTexte h4 {
+  font-size: 100%;
+  color: #333;
+}
+
+#aideENT.AEtoutTexte img {
+  float: left;
+  max-width: 50%;
+  min-width: 250px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px -3px #888, 5px 5px 5px -4px #888;
+}
+
+#aideENT.AEtoutTexte ul {
+  display: table;
+}
+
+#aideENT .AEfloatClear {
+  clear: both;
+}
+     
+#aideENT .AEfloatClear img {
+  max-width: 100%;
+}
+ 
+#aideENT .AEfilAriane {
+  color: #333;
+  font-size: 80%;
+  text-decoration: none;
+  padding-top: -15px;
+}
+      
+#aideENT .AEfilAriane a {
+  color: #333;
+  text-decoration: none;
+}  
+
+#aideENT .AEboutons {
+  color: #FFF;
+  background-color:#000;
+}
+
+#aideENT .AEmenu {
+  color: #333;
+  text-decoration: none;
+  margin-left:15px;
+}
+
+#aideENT .AEmenu a {
+  color: #333;
+  text-decoration: none;
+} 
+
+#aideENT .AEmenuInterne {
+  color: #333;
+  font-size: 80%;
+  text-decoration: none;
+  margin-left:15px;
+}
+
+#aideENT .AEmenuInterne a {
+  color: #333;
+  text-decoration: none;
+}  
+
+#aideENT #AEImgPastilleNumero {
+  max-width: auto;
+  min-width: auto;
+  float: none;
+  margin: 0px;
+  border: none;
+}
+
+@media (max-width:1024px) {
+	#aideENT.AEtoutTexte img {
+		max-width: 100%;
+	}
+}
