@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/aide/css/aideENT.css">
+    <link type="text/css" rel="stylesheet" href="/aide/css/domaineENT.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed"
+      rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      type="text/css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Configuration de Pronote pour intégration dans l'ENT</title>
+  </head>
+  <body>
+    <div id="aideENT" class="AEtoutTexte">
+      <div class="AEfloatClear">
+        <div class="AEfilAriane"><a target="_DocENT" title="Retour à l'index de l'aide"
+            href="/documentations/pronote/index.html">Pronote et l'ENT</a>
+             &gt; Configuration de Pronote pour intégration dans l'ENT<br>
+          <hr>
+        </div>
+        <div class="AEfloatClear">
+          <h3><a id="pronoteIndex" name="pronoteIndex"></a>Configuration d'un Pronote.net hébergé chez Index Éducation</h3>
+          <p>2 possibilités sont offertes, au choix de l'établissement :
+            <ul>
+              <li>pratiquer une double authentification (fournir aux utilisateurs leur identifiant pronote en plus de l'identifiant EduConnect)</li>
+              <li>effectuer un rapprochement des comptes PRONOTE et ENT (ne fournir aux usagers que l'identifiant EduConnect). </li>
+            </ul>
+            <ol>
+              <li>Dans le premier cas après s'être authentifié à l'ENT l'utilisateur devra saisir ses identifiants Pronote lors de son premier accès à Pronote au travers de l'ENT.
+            Par la suite, l'identification Pronote ne sera plus nécessaire car Pronote aura conservé la clé d'identification ENT de la personne.
+            Dans ce cas, c'est donc l'utilisateur qui réalise le rapprochement de son compte ENT avec son compte pronote.<br/>
+            Si un nouveau compte ENT pour la personne est généré, il faudra supprimer l'ancienne clé d'identification ENT associée au compte Pronote dans la base Pronote.
+            Cette clé d'identification est nommés identifiant CAS dans pronote.<br>
+            Cette configuration est très satisfaisante pour respecter le consentement des utilisateurs au rapprochement de leur compte ENT avec leur compte Pronote,
+            mais elle ajoute une complexité importante à l'administration du dispositif (distribution du compte EduConnect + distribution du compte Pronote avec toutes les incompréhensions qui en découlent, notamment lorsque les mots de passe sont oubliés).</li>
+            <li>Dans le second cas le <a title="Rapprochement des comptes ENT avec les comptes Pronote" href="/documentations/pronote/associationComptes.html">
+              rapprochement des comptes ENT et Pronote</a> est effectué par l'administrateur Pronote via des imports complémentaires dans la base Pronote.
+              Pour effectuer la configuration, il faut se rendre sur la console d'hébergement, normalement accessible ici :
+              <a title="Console d'hébergement Index Éducation" target="_blank" href="https://hebergement.index-education.net/">https://hebergement.index-education.net/.</a><br>
+              Si vous avez enregistré votre certificat vous devriez pouvoir accéder à la configuration du Pronote.net.
+              Si ce n'est pas le cas, Index Éducation fournit les documentations et l'assistance (via son support SAV) nécessaires.<br>
+              Voici une copie d'écran de la configuration à réaliser afin de rendre accessible Pronote en mode hébergé dans l'ENT
+              (basée sur Pronote 2018 et avec l'exemple de NetO'centre, mais le principe est identique sur les versions suivantes et pour les autres ENT) :</p>
+              </li>
+            </ol>
+              <p><img style="max-width: 100%;" title="Configuration Pronote hébergé chez Index Éducation" alt="Configuration Pronote hébergé chez Index Éducation"
+                src="images/consolePronoteHeberge.png"/></p>
+        </div>
+        <div class="AEfloatClear">
+          Sur cet écran, il faut effectuer les opérations suivantes :
+          <ol>
+            <li>Cocher la case "<span style="font-style: italic;">Activer l'authentification avec CAS</span>"</li>
+            <li>Choisir, pour "<span style="font-style: italic;">Mon ENT</span>" l'ENT qui correspond à votre établissement</li>
+            <li>Si en parallèle à la connexion ENT, l'établissement souhaite donner accès à Pronote en connexion directe, c'est à dire avec les identifiants Pronote,
+            il faut cocher la case correspondante.</li>
+          </ol>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
