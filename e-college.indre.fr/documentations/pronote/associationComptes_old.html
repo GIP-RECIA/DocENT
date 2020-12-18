@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/aide/css/aideENT.css">
+    <link type="text/css" rel="stylesheet" href="/aide/css/domaineENT.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab%7CRoboto+Condensed"
+      rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      type="text/css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Association des comptes pronote aux comptes ENT</title>
+  </head>
+  <body>
+    <div id="aideENT" class="AEtoutTexte">
+      <div class="AEfloatClear">
+        <div class="AEfilAriane"><a target="_DocENT" title="Retour à l'index de l'aide"
+            href="/documentations/pronote/index.html">Pronote et l'ENT</a>
+             &gt; Association des comptes pronote aux comptes ENT<br>
+          <hr>
+        </div>
+        <div class="AEfloatClear AEmenu"><a title="Avant l'association des comptes" href="#avantAssociation">
+            Avant l'association des comptes</a><br>
+          <a title="Export des informations de l'ENT" href="#exportsENT">
+            Export des informations de l'ENT</a><br>
+          <a title="Association des comptes dans pronote" href="#associationComptes">
+            Association des comptes dans pronote</a><br>
+          <a title="Ajout d'un identifiant CAS unique et vérification des imports" href="#ajoutIdentifiantCAS">
+            Ajout d'un identifiant CAS unique et vérification des imports</a>
+        </div>
+        <div class="AEfloatClear"><img style="min-width:50px; border:none; box-shadow:none; float:none; margin:0px; width:50px; padding-right:5px; padding-top:5px;" alt="Attention" src="images/Attention.png"/>La procédure d'association des comptes pronote aux comptes ENT sera simplifiée à compter du 15 décembre 2020
+        </div>
+        <hr>
+        <div class="AEfloatClear">
+          <h3><a id="avantAssociation" name="avantAssociation"></a>Avant l'association des comptes</h3>
+          <p>Il est important d'effectuer une sauvegarde de la base Pronote afin d'éviter que les imports ne «cassent» la base Pronote</p>
+          <hr>
+          <h3><a id="exportsENT" name="exportsENT"></a>Exports des informations de l'ENT</h3>
+          <p>Il convient de réaliser un export depuis l'ENT par type de population (enseignant, personnel, élève, parent) à partir de l'application
+            «Gestion des comptes» de l'ENT (bouton "Exports" puis "Pronote"). L'import dans pronote se réalise population par population.<br>
+          Le choix des options d'export (Normalisé  = tout en majuscule et sans accent) est à effectuer en fonction des saisies déjà réalisées dans
+          la base pronote afin de faciliter le rapprochement des comptes.<br>
+          Le choix de l'encodage des caractères (UTF-8 ou ISO, important pour les caractères diacritiques) dépend de l'installation de pronote et donc aucune préconisation ne peut être faite.
+          </p>
+          <hr>
+          <h3><a id="associationComptes" name="associationComptes"></a>Association des comptes dans pronote</h3>
+          <p>L'association des comptes dans pronote, qui se réalise population par population, consiste à insérer dans la base pronote
+            l'identifiant que l'ENT transmet lors de l'accès de l'utilisateur à pronote.<br>
+            Cet identifiant est appelé "Identifiant CAS" dans pronote.<br>
+            Les fichiers exportés de l'ENT doivent être déposés une machine où le client Pronote est installé et où l'on peut se connecter à la base Pronote avec le compte SPR.<br>
+            il faut <span style="font-weight: bold;">se connecter à Pronote avec le compte SPR</span>.</p>
+            <p>Pour chaque type de population, il faut importer le fichier ENT via le menu Pronote
+              "<span style="font-style: italic;">Imports/Exports > TXT/CSV/XML > Importer un fichier texte"</span>.
+              Cette action ouvre une boite de dialogue permettant de sélectionner un fichier au format texte par défaut, mais aussi au format csv, c'est le format csv qui convient.<br>
+              La sélection du fichier à importer ouvrira une nouvelle <span style="font-weight: bold;">boite de dialogue</span> qui permet d'associer les champs du fichier csv
+              aux informations de la base pronote.<br>
+              Dans cette boite de dialogue, il faut renseigner un certain nombre de <span style="font-style: italic;">rubriques à importer</span>:
+              <ul>
+                <li>« <span style="font-weight: bold;">Type de données à importer</span> » : dit correspondre au type de population du fichier à importer</li>
+                <li>« <span style="font-weight: bold;">Séparateur de champs »</span> : choisir la virgule</li>
+                <li>l'entête de chaque colonne doit correspondre à un nom de colonne de la base Pronote, il faut au minimum sélectionner trois rubriques :</li>
+                   <ul>
+                     <li>« <span style="font-weight: bold;">Identifiant CAS</span> » : correspondant à un identifiant sur 36 caractères côté ENT (colonne <span style="font-style: italic;">Identifiant</span>
+                        du fichier csv)</li>
+                     <li>« <span style="font-weight: bold;">NOM</span> » : correspondant à la colonne <span style="font-style: italic;">NOM</span> du fichier csv</li>
+                     <li>« <span style="font-weight: bold;">Prénom</span> » correspondant à la colonne <span style="font-style: italic;">PRENOM</span> du fichier csv</li>
+                   </ul>
+                <li>Concernant les <span style="font-weight: bold;">élèves</span>, il faut ajouter la rubrique « <span style="font-weight: bold;">Date de naissance</span> »
+              et lui faire correspondre la colonne <span style="font-style: italic;">DATE DE NAISSANCE</span> du fichier csv.</li>
+                <li>Pour les <span style="font-weight: bold;">parents d'élèves</span>, il faut ajouter la rubrique « <span style="font-weight: bold;">Coordonées > Libellé postal</span> »
+              et lui faire correspondre la colonne <span style="font-style: italic;">VILLE</span> du fichier csv.</li>
+            </ul>
+Les autres champs peuvent rester en « Champ ignoré », mais ils peuvent éventuellement permettre de compléter des informations manquantes dans la base pronote.<br>
+Si, dans le tableau, les caractères diacritiques ne s'affichent pas correctement, c'est que le format choisi (UTF-8 ou ISO) pour l'export dans l'ENT n'est pas correct
+et qu'il convient de refaire un export avec le bon format.
+          <p><img style="max-width: 100%;" title="Import des données dans Pronote" alt="Import des données dans Pronote" src="images/importsCSVDansPronote.png"/></p>
+        </div>
+        <div class="AEfloatClear">
+            <p>Pour finir, il faut cliquer sur le bouton « Importer » pour lancer l'import<br>
+              Lors de la fermeture de la fenêtre, il peut être proposé d'enregistrer le format d'import'. Cela peut s'avérer pratique pour le recharger lors des prochains imports.
+              Si vous choisissez d'enregistrer ce format d'import, nommez le en mentionnant le type de population concernée.<br>
+              Le rapport d'import donne des indications sur le succès du rapprochement des comptes. Les « <span style="font-style: italic;">nouveaux comptes</span> »
+              inscrit sont les comptes qui n'aurons pas pu être rapproché et qu'il faudra sans doute supprimer sinon pour ne pas se retrouver avec des doublons
+              dans la base, par contre les « <span style="font-style: italic;">comptes modifiés</span> » sont les comptes qui ont été rapprochés.<br>
+              Malheureusement, la procédure ne permet pas un retour en arrière, il est donc important d'effectuer une sauvegarde de la base pronote avant
+              toute action. Il est même recommandé de réaliser une sauvegarde après chaque étape de rapprochement.
+          </p>
+	  <p><span style="color:red; font-weight:bold;">ATTENTION, piège à éviter</span> : au moment de la définition des colonnes à rapprocher dans l'interface pronote, la colonne de l'identifiant n'est pas associée à la colonne "Identifiant CAS" automatiquement. Il faut faire cette association, en cliquant simplement sur l'intitulé de la colonne, pour que le nouvel identifiant soit mis à jour dans la base pronote.<br>
+Pour vérifier que l'import s'est bien passé, il suffit de vérifier dans les informations utilisateur que la colonne "Identifiant CAS" est correctement renseignée avec un identifiant de 36 caractères.
+          <hr>
+          <h3><a id="ajoutIdentifiantCAS" name="ajoutIdentifiantCAS"></a>Ajout d'un identifiant CAS unique et vérification des imports</h3>
+          <p>Il n'est pas toujours nécessaire de réaliser l'import d'un fichier csv, notamment quand il s'agit d'effectuer une association pour un nombre très limité d'utilisateurs
+            ou de traiter quelques cas marginaux.
+            Pronote permet dans ce cas de saisir directement ce qu'ils appellent l'<span style="font-weight: bold;">Identifiant CAS</span> dans une liste d'utilisateurs.
+            L'<span style="font-weight: bold;">Identifiant CAS</span> de Pronote doit correspondre à l'identifiant de l'utilisateur dans l'ENT (sur 36 caractères). Cet identifiant peut être récupéré via la
+            <span style="font-style: italic;">Gestion des comptes ENT</span>, en générant le fichier d'export pour pronote que vous pourrez alors édter dans un tableur pour repérer la ligne correspondant à la personne concernée.<br>
+            Dans pronote, on affiche la liste des utilisateurs en cliquant sur « <span style="font-weight: bold;">Ressources (nommé Rsc.)</span> », puis en choisissant la population désirée.<br>
+            Si la colonne <span style="font-weight: bold;">Identifiant CAS</span> n'est pas affichée, il faut l'ajouter au tableau en cliquant sur la petite clé à molette, en haut,
+            à droite du tableau.<br>
+            On peut ensuite entrer l'<span style="font-weight: bold;">Identifiant CAS</span> en double-cliquant sur la case correspondante sur la ligne du tableau associée
+            à l'utilisateur et en entrant l'identifiant de l'utilisateur récupéré dans le fichier d'export ENT.<br/>
+            Ces tableau des utilisateurs permet aussi, après un import, de vérifier que celui-ci s'est bien passé, que les <span style="font-weight: bold;">Identifiant CAS</span>
+            ont bien été récupérés et qu'il n'y a pas eu de créations de comptes non désirés.
+            <p><img title="Liste utilisateurs Pronote" alt="Liste utilisateurs Pronote" style="max-width: 100%;" src="images/listeUtilisateursPronote.png"/>
+            </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
